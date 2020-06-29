@@ -1,0 +1,15 @@
+{
+  "name": "consume_github_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.4.10"
+  }
+}
