@@ -9,9 +9,9 @@ function getRepos(repoName, startDate, endDate) {
 			  pr = 0
 			  for(i in data){
 				  if(new Date(data[pr].created_at) >= start_dates && new Date(data[pr].created_at) <= end_dates && new Date(data[pr].updated_at) >= start_dates  && new Date(data[pr].updated_at) <= end_dates){
-				    //console.log(data[pr]);
-					  console.log(`pull reguest created date ${data[pr].created_at}`);
-					  console.log(`pull reguest updated date ${data[pr].updated_at}`);
+				    console.log(data[pr]);
+					// console.log(`pull reguest created date ${data[pr].created_at}`);
+				    // console.log(`pull reguest updated date ${data[pr].updated_at}`);
 				  }
 				  pr++;
 				}
@@ -21,12 +21,3 @@ function getRepos(repoName, startDate, endDate) {
  }
 getRepos('boilerplate-project-stockchecker', '2018-11-18' , '2019-03-27');
 
-//const fetch = require("../node_modules/node-fetch");
-// async function getRepos(){
-//     const url = 'https://api.github.com/users/jbrasepae/repos'
-//     const response = await fetch(url)
-//     const result = await response.json()
-
-//     console.log(result);
-// }
-//getRepos();
