@@ -6,18 +6,18 @@ function getRepos(repoName, startDate, endDate) {
 		  `)
 		  .then((response) => response.json())
 		  .then((data) => {
-			  pr = 0
+			  i = 0
 			  for(i in data){
-				  if(new Date(data[pr].created_at) >= start_dates && new Date(data[pr].created_at) <= end_dates && new Date(data[pr].updated_at) >= start_dates  && new Date(data[pr].updated_at) <= end_dates){
-				    console.log(data[pr]);
-					// console.log(`pull reguest created date ${data[pr].created_at}`);
-				    // console.log(`pull reguest updated date ${data[pr].updated_at}`);
+				  if(new Date(data[i].created_at) >= start_dates && new Date(data[i].created_at) <= end_dates && new Date(data[i].updated_at) >= start_dates  && new Date(data[i].updated_at) <= end_dates){
+				   // console.log(data[i]);
+					console.log(`pull reguest created date ${data[i].created_at}`);
+				    console.log(`pull reguest updated date ${data[i].updated_at}`);
 				  }
-				  pr++;
+				  i++;
 				}
 			})
 			.catch((error) => console.error(error));
 
  }
-getRepos('boilerplate-project-stockchecker', '2018-11-18' , '2019-03-27');
+getRepos('boilerplate-project-stockchecker', '2018-06-18' , '2020-03-27');
 
