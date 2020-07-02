@@ -9,9 +9,8 @@ function getRepos(repoName, startDate, endDate) {
 			  i = 0
 			  for(i in data){
 				  if(new Date(data[i].created_at) >= start_dates && new Date(data[i].created_at) <= end_dates && new Date(data[i].updated_at) >= start_dates  && new Date(data[i].updated_at) <= end_dates){
-				   // console.log(data[i]);
-					console.log(`pull reguest created date ${data[i].created_at}`);
-				    console.log(`pull reguest updated date ${data[i].updated_at}`);
+
+					console.log(data[i]);
 				  }
 				  i++;
 				}
