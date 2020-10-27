@@ -1,6 +1,5 @@
 const fetch = require('node-fetch');
 function getRepos(repoName, startDate, endDate) {
-
 	var githubUser = 'freeCodeCamp';
 	var start_dates = new Date(startDate);
 	var end_dates = new Date(endDate);
@@ -15,8 +14,7 @@ function getRepos(repoName, startDate, endDate) {
 					(new Date(data[i].created_at) >= start_dates && new Date(data[i].created_at) <= end_dates) ||
 					(new Date(data[i].updated_at) >= start_dates && new Date(data[i].updated_at) <= end_dates) ||
 					(new Date(data[i].closed_at) >= start_dates && new Date(data[i].closed_at) <= end_dates) ||
-					(new Date(data[i].merged_at) >= start_dates && new Date(data[i].merged_at) <= end_dates
-					)
+					(new Date(data[i].merged_at) >= start_dates && new Date(data[i].merged_at) <= end_dates)
 				) {
 					console.log(data[i]);
 				}
