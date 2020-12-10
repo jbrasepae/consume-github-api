@@ -1,10 +1,10 @@
 const fetch = require('node-fetch');
+
 function getRepos(repoName, startDate, endDate) {
 	var start_dates = new Date(startDate);
 	var end_dates = new Date(endDate);
 
-	fetch(`https://api.github.com/repos/${repoName}/pulls
-		  `)
+	fetch(`https://api.github.com/repos/${repoName}/pulls`)
 		.then((response) => response.json())
 		.then((data) => {
 			for (let i = 0; i in data; i++) {
