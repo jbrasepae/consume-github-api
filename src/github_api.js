@@ -21,4 +21,4 @@ function getRepos(repoName, startDate, endDate) {
 		})
 		.catch((error) => console.error(error));
 }
-//getRepos('freeCodeCamp/boilerplate-project-stockchecker', '2018-06-18', '2020-03-27');
+getRepos('freeCodeCamp/boilerplate-project-stockchecker', '2018-06-18', '2020-03-27');
